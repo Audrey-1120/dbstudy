@@ -1,0 +1,30 @@
+/*
+    다대다 관계
+    1. 2개의 테이블을 직접 관계짓는 것은 불가능하다.
+    2. 다대다 관계를 가지는 2개의 테이블과 연결될 중간 테이블이 필요하다.
+    3. 일대다 관계를 2개 만들면 다대다 관계가 된다.
+*/
+
+
+
+-- 학생 테이블 생성
+
+CREATE TABLE STUDENT_T (
+    STUDENT_ID NUMBER NOT NULL PRIMARY KEY,
+    NAME VARCHAR2(100 BYTE) NOT NULL,
+    GRADE NUMBER NOT NULL,
+    CLASS NUMBER NOT NULL,
+    STUDENT_NUM NUMBER NOT NULL
+    );
+    
+-- 과목 테이블
+CREATE TABLE SUBJECT_T (
+    SUBJECT_ID VARCHAR2(100 BYTE) NOT NULL PRIMARY KEY,
+    SUBJECT VARCHAR2(100 BYTE) NOT NULL
+    );
+    
+-- 수강신청 테이블
+CREATE TABLE COURSE_T (
+    STUDENT_ID NUMBER REFERENCES STUDENT_T(STUDENT_ID),
+    SUBJECT_ID VARCHAR2(100 BYTE) REFERENCES SUBJECT_T(SUBJECT_ID)
+    );
