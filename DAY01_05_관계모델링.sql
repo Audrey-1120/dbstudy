@@ -35,7 +35,7 @@ CREATE TABLE PROCEEDING_T (
 );
 
 --프로젝트 진행 테이블 삭제
-DROP TABLE PROCEDING_T;
+DROP TABLE PROCEEDING_T;
 --프로젝트 테이블 삭제
 DROP TABLE PROJECT_T;
 --사원 테이블 삭제
