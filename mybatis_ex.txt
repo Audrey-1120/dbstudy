@@ -1,0 +1,40 @@
+index.jsp
+list.jsp - 학생관리 페이지
+write.jsp - 신규학생등록화면
+detail.jsp - 학생 상세 조회화면
+
+contextPath : /student
+프로젝트 : Student
+
+int registerStudent(StudentDto student) - 학생등록
+int modifyC
+
+1) 신규학생등록
+- 이름, 국어, 영어, 수학을 입력하고 작성완료 누르면 등록 완료
+2) 상위 3명 목록 출력 - list 이동 시 자동으로 실행
+3) 학생 상세조회
+- 학번, 평균, 학점 수정 불가능
+- 이름, 국어, 영어, 수학 수정 가능
+4) 학생 선택조회
+- begin, end 값 받아서 그 사이의 값 출력
+5) 학생 삭제
+
+ 
+
+
+
+StudentDto 생성
+학번 stuNo
+이름 name
+국어 kor
+영어 eng
+수학 mat
+
+Actionforward 생성
+- isRedirect, view 
+
+StudentDao 생성
+addStudent(StudentDto student)
+
+
+
